@@ -1,0 +1,14 @@
+{
+  "name": "reqlick-api-docs",
+  "version": "1.0.0",
+  "main": "mint.json",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "mintlify dev"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mintlify": "^4.0.222"
+  }
+}
