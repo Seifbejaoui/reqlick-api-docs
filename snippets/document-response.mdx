@@ -1,0 +1,43 @@
+<ResponseField name="id" type="string" required>
+  The unique identifier for the document.
+</ResponseField>
+
+<ResponseField name="name" type="string" required>
+  The name of the document.
+</ResponseField>
+
+<ResponseField name="description" type="string">
+  The description of the document.
+</ResponseField>
+
+<ResponseField name="file" type="string" required>
+  The reference to where the file is stored (e.g., S3, Google Cloud Storage).
+</ResponseField>
+
+<ResponseField name="size" type="number" requried>
+  The size of the file (in bytes).
+</ResponseField>
+
+<ResponseField name="type" type="string" requried>
+  The file type (e.g., pdf, docx).
+</ResponseField>
+
+<ResponseField name="links" type="object[]">
+  The links associated with the document.
+</ResponseField>
+
+<ResponseField name="views" type="object[]">
+  The tracked views associated with the document.
+</ResponseField>
+
+<ResponseField name="projectId" type="string">
+  The ID of the associated project.
+</ResponseField>
+
+<ResponseField name="createdAt" type="string">
+  The date and time when the document was created.
+</ResponseField>
+
+<ResponseField name="updatedAt" type="string">
+  The date and time when the document was last updated.
+</ResponseField>

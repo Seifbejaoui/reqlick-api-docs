@@ -1,0 +1,46 @@
+<ResponseField name="id" type="string" required>
+  The unique identifier for the workspace.
+</ResponseField>
+<ResponseField name="url" type="string" required>
+  The URL of the workspace.
+</ResponseField>
+<ResponseField name="name" type="string" required>
+  The name of the workspace.
+</ResponseField>
+<ResponseField name="logo" type="string">
+  The logo of the workspace.
+</ResponseField>
+<ResponseField name="links" type="object[]">
+  The links of the workspace.
+</ResponseField>
+<ResponseField name="documents" type="object[]">
+  The documents of the workspace.
+</ResponseField>
+<ResponseField name="qrcode" type="object[]">
+  The QR Codes of the workspace.
+</ResponseField>
+<ResponseField name="views" type="object[]">
+  The views associated with the related links, qrcodes and documents in the
+  workspace.
+</ResponseField>
+<ResponseField name="domains" type="object[]">
+  The domains associated with the workspace.
+</ResponseField>
+<ResponseField name="members" type="object[]">
+  The members of the workspace.
+</ResponseField>
+<ResponseField name="isArchived" type="boolean" default="false">
+  Indicates whether the workspace is archived.
+</ResponseField>
+<ResponseField name="subscriptionId" type="string" required>
+  The subscription ID of the workspace.
+</ResponseField>
+<ResponseField name="createdAt" type="string">
+  The date and time when the workspace was created.
+</ResponseField>
+<ResponseField name="viewedAt" type="string">
+  The date and time when the workspace was viewed.
+</ResponseField>
+<ResponseField name="updatedAt" type="string">
+  The date and time when the workspace was updated.
+</ResponseField>

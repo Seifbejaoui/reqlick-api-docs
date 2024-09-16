@@ -1,0 +1,104 @@
+<ResponseField name="id" type="string" required>
+  The unique identifier for the subscription.
+</ResponseField>
+
+<ResponseField name="userId" type="string">
+  The ID of the associated user.
+</ResponseField>
+
+<ResponseField name="plan" type="string" default="FREE">
+  The subscription plan of the user.
+</ResponseField>
+
+<ResponseField name="billingCycleStart" type="number">
+  The day of the month when the billing cycle starts.
+</ResponseField>
+
+<ResponseField name="stripeId" type="string">
+  The Stripe ID associated with the subscription.
+</ResponseField>
+
+<ResponseField name="isCanceledAtPeriodEnd" type="boolean" default="false">
+  Indicates whether the subscription will be canceled at the end of the current
+  billing period.
+</ResponseField>
+
+<ResponseField name="isActive" type="boolean" default="true">
+  Indicates whether the subscription is currently active.
+</ResponseField>
+
+<ResponseField name="isPaymentFailed" type="boolean" default="false">
+  Indicates whether the payment for the subscription has failed.
+</ResponseField>
+
+<ResponseField name="isCanceledAt" type="string">
+  The date and time when the subscription was canceled.
+</ResponseField>
+
+<ResponseField name="isCancelAt" type="string">
+  The date and time when the subscription is scheduled to be canceled.
+</ResponseField>
+
+<ResponseField name="interval" type="string">
+  The billing interval for the subscription (e.g., year, month).
+</ResponseField>
+
+<ResponseField name="subscriptionScheduleId" type="string">
+  The ID of the subscription schedule.
+</ResponseField>
+
+<ResponseField name="periodEnd" type="string">
+  The end date of the subscription period.
+</ResponseField>
+
+<ResponseField name="projects" type="object[]">
+  The projects associated with the subscription.
+</ResponseField>
+
+<ResponseField name="amount" type="number" default="0">
+  The amount of the subscription ($0 by default).
+</ResponseField>
+
+<ResponseField name="domainsLimit" type="number" default="0">
+  The limit on the number of domains for the subscription.
+</ResponseField>
+
+<ResponseField name="projectsLimit" type="number" default="1">
+  The limit on the number of projects for the subscription.
+</ResponseField>
+
+<ResponseField name="usersLimit" type="number" default="1">
+  The limit on the number of users for the subscription.
+</ResponseField>
+
+<ResponseField name="stockageLimit" type="bigint" default="536870912">
+  The storage limit for the subscription (in bytes; 512MB by default).
+</ResponseField>
+
+<ResponseField name="clicksLimit" type="number" default="1000">
+  The limit on the number of clicks for the subscription.
+</ResponseField>
+
+<ResponseField name="shortLinksLimit" type="number" default="10">
+  The limit on the number of short links for the subscription.
+</ResponseField>
+
+<ResponseField name="qrCodeLinksLimit" type="number" default="2">
+  The limit on the number of QR code links for the subscription.
+</ResponseField>
+
+<ResponseField name="stockageUsage" type="bigint" default="0">
+  The current storage usage (in bytes).
+</ResponseField>
+
+<ResponseField name="clicksUsage" type="number" default="0">
+  The current number of clicks used.
+</ResponseField>
+
+<ResponseField name="createdAt" type="string">
+  The date and time when the subscription was created.
+</ResponseField>
+
+<ResponseField name="updatedAt" type="string">
+  The date and time when the subscription was last updated.
+</ResponseField>

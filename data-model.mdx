@@ -6,17 +6,20 @@ description: "A quick overview of how Reqlick is structured."
 import WorkspaceResponse from "/snippets/workspace-response.mdx";
 import LinkResponse from "/snippets/link-response.mdx";
 import DomainResponse from "/snippets/domain-response.mdx";
-import TagResponse from "/snippets/tag-response.mdx";
+import DocumentResponse from "/snippets/document-response.mdx";
+import QRCodeResponse from "/snippets/qrcode-response.mdx";
+import SubscriptionResponse from "/snippets/subscription-response.mdx";
+import UserResponse from "/snippets/user-response.mdx";
 
 Whether you are using Reqlick's [API](/api-reference/introduction) or not, this page is a quick way to understand how Reqlick works.
 
-Within Reqlick, all data belongs to a [**Workspace**](#workspace). Within a workspace, you have [Links](#links), [Domains](#domains), [Tags](#tags), and more.
+Within Reqlick, all data belongs to a [**Workspace**](#workspaces). Within a workspace, you have [Links](#links), [Documents](#documents), [Subscriptions](#subscriptions), [Domains](#domains) and more.
 
-## Workspace
+## Workspaces
 
-Workspaces is the defacto way of organizing your links and working with your team on Reqlick. You can think of a Reqlick workspace like a workspace on Slack or Discord – it's a shared space where you can [invite your team members](https://dub.co/help/article/how-to-invite-teammates) to collaborate on links.
+Workspaces is the defacto way of organizing your links and working with your team on Reqlick. You can think of a Reqlick workspace like a workspace on Slack or Discord – it's a shared space where you can invite your team members to collaborate on links, QR codes and files.
 
-When interacting with Dub's API, you will also need to specify the [Workspace ID](/api-reference/introduction#workspace-id) to perform any operation. You can find the workspace ID under the **General** settings page of your workspace.
+When interacting with Reqlick's API, you will also need to specify the Workspace URL to perform any operation. You can find the workspace URL under the **General** settings page of your workspace.
 
 <Accordion title="Workspace model">
   <WorkspaceResponse />
@@ -24,24 +27,50 @@ When interacting with Dub's API, you will also need to specify the [Workspace ID
 
 ## Links
 
-Links are the bread and butter of Dub. You can shorten any URL to a Dub link, which you can then share with your audience. Links can be [created](/api-reference/endpoint/create-a-new-link), [updated](/api-reference/endpoint/edit-a-link), and [deleted](/api-reference/endpoint/delete-a-link) via the [Dub API](/api-reference/introduction) or the [Dub dashboard](https://app.dub.co).
+Links are the bread and butter of Reqlick. You can shorten any URL to a Reqlick link, which you can then share with your audience. Links can be created, updated, and deleted via the [Reqlick API](/api-reference/introduction) or the [Reqlick dashboard](https://app.reqlick.com).
 
 <Accordion title="Link model">
   <LinkResponse />
 </Accordion>
 
+## Documents
+
+Documents are the files that you can upload and manage within your workspace. These can include contracts, reports, or any file you need to store and share with your team. Using the [Reqlick API](/api-reference/introduction), you can upload, update, and delete documents.
+
+<Accordion title="Document model">
+  <DocumentResponse />
+</Accordion>
+
+## QR Codes
+
+Reqlick allows you to generate custom QR codes for your links, providing a visual and scannable representation of your shortened URLs. These QR codes can be customized with colors, logos, and other design elements.
+
+You can create, update, and delete QR codes via the [Reqlick API](/api-reference/introduction). Each QR code is linked to a specific shortened link for easy access.
+
+<Accordion title="QR Code model">
+  <QRCodeResponse />
+</Accordion>
+
 ## Domains
 
-On Dub, you can [add custom domains](https://dub.co/help/article/how-to-add-custom-domain) to create branded short links for better brand recognition. You can also [set a primary domain](https://dub.co/help/article/how-to-set-primary-domain) for it to be used as the default domain for new links (both via the API and the dashboard).
+On Reqlick, you can add custom domains to create branded short links for better brand recognition.
 
 <Accordion title="Domain model">
   <DomainResponse />
 </Accordion>
 
-## Tags
+## Subscriptions
 
-Tags are a way to organize your links. You can [add tags to your links](https://dub.co/help/article/how-to-use-tags) to categorize them and make them easier to find. You can also [filter analytics by tags](https://dub.co/blog/introducing-tags#filtering-analytics-by-tags) to get a better understanding of how your campaigns are performing.
+Reqlick operates on a subscription-based model, allowing users to unlock various features depending on their subscription level. You can manage subscription plans, view current subscriptions, and upgrade or downgrade subscriptions only on the [Reqlick dashboard](https://app.reqlick.com).
 
-<Accordion title="Tag model">
-  <TagResponse />
+<Accordion title="Subscription model">
+  <SubscriptionResponse />
+</Accordion>
+
+## Users
+
+Users are the individuals who interact with Reqlick. Each user is associated with one or more workspaces and can be assigned different roles, such as admin or collaborator. The API allows for user creation, role management, and user authentication.
+
+<Accordion title="User model">
+  <UserResponse />
 </Accordion>

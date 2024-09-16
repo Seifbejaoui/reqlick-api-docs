@@ -1,6 +1,7 @@
 {
   "$schema": "https://mintlify.com/schema.json",
   "name": "Reqlick API",
+  "openapi": "https://prod-service.reqlick.com/openapi.json",
   "logo": {
     "dark": "/logo/dark.svg",
     "light": "/logo/light.svg",
@@ -17,7 +18,7 @@
     }
   },
   "modeToggle": {
-    "default": "dark",
+    "default": "light",
     "isHidden": true
   },
   "topbarLinks": [
@@ -53,12 +54,74 @@
       "group": "API Documentation",
       "pages": ["api-reference/introduction"]
     },
+
     {
-      "group": "Endpoint Examples",
+      "group": "Links",
       "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
+        "api-reference/endpoint/links/get/get-link-by-id/index",
+        "api-reference/endpoint/links/get/random/index",
+        "api-reference/endpoint/links/get/stats-by-id/index",
+        "api-reference/endpoint/links/post/link-for-document/index",
+        "api-reference/endpoint/links/post/new-link/index",
+        "api-reference/endpoint/links/put/update-link/index",
+        "api-reference/endpoint/links/put/update-link-status-by-id/index",
+        "api-reference/endpoint/links/delete/delete-link-by-id/index"
+      ]
+    },
+    {
+      "group": "QR Codes",
+      "pages": ["api-reference/endpoint/qrcodes/post/qrcode/index"]
+    },
+    {
+      "group": "Documents",
+      "pages": [
+        "api-reference/endpoint/documents/get/retrieveDocumentById/index",
+        "api-reference/endpoint/documents/get/retrieveAllDocuments/index",
+        "api-reference/endpoint/documents/get/retrieveDocumentLinksById/index",
+        "api-reference/endpoint/documents/get/retrieveDocumentStatsById/index",
+        "api-reference/endpoint/documents/post/createNewDocumentByWorkspace/index",
+        "api-reference/endpoint/documents/put/updateDocumentById/index",
+        "api-reference/endpoint/documents/delete/documentById/index"
+      ]
+    },
+
+    {
+      "group": "Workspaces",
+      "pages": [
+        "api-reference/endpoint/workspaces/get/projectByUrl/index",
+        "api-reference/endpoint/workspaces/get/links/index",
+        "api-reference/endpoint/workspaces/get/qrcodes/index",
+        "api-reference/endpoint/workspaces/get/members/index",
+        "api-reference/endpoint/workspaces/get/projects-analytics-click/index",
+        "api-reference/endpoint/workspaces/get/projects-analytics-stats/index",
+        "api-reference/endpoint/workspaces/put/projectByUrl/index",
+        "api-reference/endpoint/workspaces/put/projectLogo/index",
+        "api-reference/endpoint/workspaces/delete/projectByUrl/index"
+      ]
+    },
+    {
+      "group": "Domains",
+      "pages": [
+        "api-reference/endpoint/domains/get/retrieveAllDomains/index",
+        "api-reference/endpoint/domains/get/verifyDomainStatusBySlug/index",
+        "api-reference/endpoint/domains/post/createNewDomain/index",
+        "api-reference/endpoint/domains/post/redirectDomain/index",
+        "api-reference/endpoint/domains/delete/domainBySlug/index"
+      ]
+    },
+    {
+      "group": "Subscriptions",
+      "pages": [
+        "api-reference/endpoint/subscriptions/get/subscription-by-user/index"
+      ]
+    },
+    {
+      "group": "Users",
+      "pages": [
+        "api-reference/endpoint/users/get/me/index",
+        "api-reference/endpoint/users/get/usage/index",
+        "api-reference/endpoint/users/put/update-user-info/index",
+        "api-reference/endpoint/users/put/update-user-picture/index"
       ]
     }
   ],
